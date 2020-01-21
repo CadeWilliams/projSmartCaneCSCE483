@@ -1,0 +1,207 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\geometry{margin=1.5in, footskip=1in}
+
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\fancyfoot{}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\fancyfoot[C]{TAMU CSCE 483 Project Proposal}
+
+\title{Project title\\{\Large Project Proposal}}
+\author{\begin{Large} Author 1\\Author 2\\Author 3\\Author 4\\ \end{Large} Department of Computer Science and Engineering\\Texas A\&M University\\[4ex]}
+\date{\today}
+
+\makeatletter         
+\def\@maketitle{
+\centering \includegraphics[width = 2in]{images/holder.jpg}\\[8ex]
+\begin{center}
+{\Huge \bfseries \sffamily \@title }\\[4ex] 
+{\LARGE  \@author} 
+{\Large \@date\\[8ex]}
+\end{center}}
+\makeatother
+
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section*{Executive Summary (1 page; 5 points)}
+The executive summary is a brief description of the project. The
+purpose is to give a quick overview of (1) need, goal and objectives,
+(2) design and implementation, and (3) expected results and benefits
+of the project. The intended audience of the executive summary is a
+program director, someone who makes decisions about which projects will
+receive funding. Since the executive summary is a summary, it should be
+written last.
+
+\section{Introduction (1 page)}
+\subsection{Problem Background (5 points)}
+Describe the general scope of your project, and the specific problem
+that your project is addressing. Go from general (e.g., search and
+rescue robotics) to specific (e.g., GPS navigation). In most of the
+senior design projects, the problem background is an area of research
+or an application domain within computer engineering.
+
+\subsection{Needs statement (5 points)} After you have introduced the
+problem domain, it is time to define a specific need that your project
+will address. Articulate the need as an expression of dissatisfaction
+with the current situation.
+
+\subsection{Goal and objectives (5 points)}
+
+The goal is a brief, general, and ideal response to the needs
+statement. The need describes the current, unsatisfactory situation;
+the goal describes the future condition to which we aspire. The goal
+statement is so ideal that it would be difficult to decide when it
+was achieved. It rather establishes a general direction for the design
+mission. In contrast, the objectives (there will likely be more than
+one) are quantifiable expectations of performance. The objectives should
+also include a description of the conditions under which a design must
+perform. Specifying the operating conditions will allow you to evaluate
+the performance of different design options under comparable conditions.
+
+\subsection{Design constraints and feasibility (5 points)} Describe
+the constraints (e.g., technical, physical, economical, temporal)
+that you have to work with. In many cases, your needs statement will
+have already identified some of the constraints that your design will
+have to meet. Assess the extent to which your project objectives can
+be accomplished.
+
+\section{Literature and technical survey (1-2 pages; 10 points)} Describe
+prior research and development efforts that are specifically related to
+your problem, your needs statement, and your goals and objectives. This is
+not meant to be a comprehensive survey of an engineering discipline, but a
+concise overview of the most significant results that are tightly related
+to your project. As a guideline, this section should include a review
+of not less than five commercial products or research projects. This
+review should conclude with a statement that explains the extent to which
+your proposed design relates to these other products/projects (e.g., is
+it better? or faster? or cheaper? does it target a new niche market?).
+\begin{itemize} 
+\item Existing product or project 1 
+\item Existing product or project 2 
+\item Existing product or project 3 
+\item Existing product or project 4 
+\item Existing product or project 5 
+\end{itemize}
+
+\section{Proposed Work}
+\subsection{Evaluation of alternative solutions (1 page, 15 points)}
+This is a critical aspect of your proposal. For any goal there are likely
+many alternative solutions. In most cases, the alternative solutions
+will emerge from your literature and technical survey. What you have
+to do here is analyze the pros and cons of each of these solutions
+(and hopefully additional solutions you come up with), and justify your
+decision to opt for a particular solution. As a guideline, this section
+should include not less than five alternative solutions:
+\begin{itemize}
+\item Alternative solution 1
+\item Alternative solution 2
+\item Alternative solution 3
+\item Alternative solution 4
+\item Alternative solution 5
+\end{itemize}
+
+\subsection{Design specifications (3-4 pages, 15 points)}
+Once you have identified a solution that addresses the needs of the
+project, it is time to present the specifics of your design. Start with
+a high-level block diagram of the system (i.e., 5 building blocks or
+modules), followed by a description of each module. This description
+should include techniques (e.g., algorithms, devices), parts (e.g.,
+hardware, software), and the “glue logic” that will make the system
+work.  Your proposed design should build support for the feasibility of
+your project.
+
+\subsection{Approach for design validation (1 page, 10 points)}
+This is a very simple but important aspect of your project. How will you
+test that your system does what it was designed to do? Does it solve the
+stated need? The validation tests should be consistent with the conditions
+under which your design must perform, as stated in the project objectives.
+
+
+\section{Engineering standards}
+\subsection{Project management (1 page, 10 points)}
+Briefly list the qualifications of the team members and decide who will
+be in charge of each of the different areas in the project (team leader,
+systems design, software design, hardware design, finance and purchases,
+testing, technical reporting, etc.) Describe the mechanisms that will
+be used to manage the project as a team (e.g., brainstorming sessions,
+tracking progress). A regular work schedule should be included here,
+showing the times when the team will meet in the lab to work on the
+project (in addition to meeting times).  
+
+NOTE. Each person in the team
+should have technical responsibilities. For instance, it would not be
+acceptable that one person handles only purchasing and documentation
+but does not perform any development work.
+
+\subsection{Schedule of tasks, Pert and Gantt charts (1 page, 5 points)}
+Break down the project into clearly identified sub-tasks, analyze
+dependencies among them, identify critical paths, and design a feasible
+schedule for accomplishing these tasks.
+
+\subsection{Economic analysis (1/2 page; 2 points)}
+Some economic issues were already considered during the analysis of
+constraints and the itemized budget. Here you provide a further economic
+analysis, were your system to become a commercial product:
+\begin{itemize}
+\item Economical viability: potential marketability of the system,
+expected volume production costs (as opposed to prototyping costs)
+\item Sustainability: are system parts available from more than
+one vendor? What maintenance and support will the product require?
+\item Manufacturability: what is the effect of component tolerances on
+system performance?, worst- case analysis, expected production yield,
+testability and compliance to regulations (e.g., FCC)
+\end{itemize}
+
+\subsection{Societal, safety and environmental analysis (1/2 page; 2 points)}
+What is the potential impact of your project to society, both beneficial
+(e.g., quality of life), and detrimental (e.g., loss of privacy)? What are
+the safety precautions that you have to take when working on the project
+(e.g., personal injuries, damage to the equipment/facilities)? What is
+the potential environmental impact of your project (e.g., pollution)
+and how will you minimize it?
+
+\subsection{Itemized budget (1 page; 3 points)}
+Detailed budget of all costs expected to be incurred during the project
+(e.g., parts, fabrication services).
+
+\section{References (2 points)}
+Here you acknowledge all the documents that you used as references
+throughout the text. Please use the IEEE reference format (
+\url{http://www.ieee.org/documents/ieeecitationref.pdf} )
+
+\section{Appendices (1 point)}
+\subsection{Product datasheets}
+Include product datasheets that may be particularly relevant to your
+proposed work. Say you want to use a certain type of microcontroller,
+because it has just the right combination features (e.g., types of I/O
+ports, or power consumption, etc). You would then attach datasheets for
+this product.  NOTE: including a data sheet does not replace the need
+for explaining how the component works and how it will be integrated in
+the system (section 4.2 ).
+
+\section{Bios and CVs}
+Include a brief bio-sketch and CV for each team member. The bio-sketch
+is a brief summary of your professional / educational accomplishments,
+whereas the CV is a more comprehensive and detailed (itemized) description
+of you qualifications. Browse through some of the IEEE Transactions (
+\url{http://ieeexplore.ieee.org/} ) for examples of typical bio-sketches.
+
+
+
+\end{document}
