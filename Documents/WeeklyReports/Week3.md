@@ -21,7 +21,7 @@
 | --- | --- | --- |
 |  Contacting Disability Services   |  Baltazar Guerra L.  | Yes |
 | Research info on Distance Sensor | Matthew Giuffrida | Yes |
-| Arduino Cost and Capabilities | Shawn Popal | |
+| Arduino Cost and Capabilities | Shawn Popal | Yes |
 | Compare with existing products | Jonathan Williams | |
 | Haptic Feedback | Arthur Helmen | Yes |
 
