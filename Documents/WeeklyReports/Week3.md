@@ -23,7 +23,7 @@
 | Research info on Distance Sensor | Matthew Giuffrida | Yes |
 | Arduino Cost and Capabilities | Shawn Popal | |
 | Compare with existing products | Jonathan Williams | |
-| Haptic Feedback | Arthur Helmen | |
+| Haptic Feedback | Arthur Helmen | Yes |
 
 
 ## Plans for next period
