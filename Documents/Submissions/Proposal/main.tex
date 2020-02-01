@@ -1,0 +1,52 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\title{\textbf{\Huge Smart-Cane}}
+\author{Baltazar Guerra L.\\ Jonathan Williams \\ Matthew Giuffrida \\ Arthur Helmen \\ Shawn Popal \\ \\ \\ \\ \\}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Problem Background}
+
+Blindness and visual impairment present natural complications to travel for those who have those conditions. Obstacle detection in particular is an area of concern, as could be expected. One of the most common tools used by those individuals who have visual impairments to assist in travel is a specialized cane, usually referred to as a “white cane” in the United States. These are long canes, usually capable of folding up for ease of storage. They are generally white, as the name indicates, for both ease of visibility for others, and to identify the user as blind or visually impaired. The canes are used by the individuals to identify potential obstacles through sweeping the cane in front of themselves, as well as a from of surveying the environment around them – for example, feeling the bumps on a road that indicate a crossing is there. These canes generally are purely mechanical, with no electronic components. \par
+
+The project proposal is to create a “smart cane” – a device that acts as a white cane, while also leveraging technology to add to or enhance the basic functionality of the traditional, mechanical cane. The primary goal is to create a device that keeps all of the functionality of a traditional cane, while adding additional capabilities to the core functionality of the cane – that is, to make safe, efficient travel easier for those with blindness or visual impairments. \par
+
+\subsection{Needs Statement}
+In order to have a better understanding of what problems we need to tackle, we spoke to Justin Romack who works at Texas A\&M Disablity Services (and is blind) so he could give us some insight of his everyday struggles and those of his peers. The main problems that most face are: not being able to detect obstacles that are farther away from their cane, losing track of their spatial location inside of a room or building (especially if the texture of the ground is the same everywhere), and heavy equipment hurting their wrist and arm after some time. Additionally, he suggested that making a robust system with the ability to toggle certain settings would be really useful since some people rely more on tactile or auditory feedback than others and having more feedback of that type could be heavily distracting.
+\subsection{Goal and objectives}
+
+Current market solutions are very expensive and lack certain quality of life functionality. So our goal for this product would be to develop a system that is first off portable and affordable. Meaning that customers do not need to buy a whole new cane but rather can attach our product to their existing cane and it won’t cost them hundreds of dollars to purchase the system. With that, the system must ideally be able to last the entire working day, having the product’s battery run out in the middle of heavy use would not be ideal for the customer, particularly those who would heavily rely on it. \par
+
+Current solutions also offer very limited object detection. Most of which only detect around a chest level, which could be problematic for those who have heavy visual impairments. Our product should be able to detect objects at a variety of heights as well as include navigation features for those on the Texas A\&M campus either through utilizing Google Maps or the Aggie Map which should assist those in finding the proper places to cross the road for example. Feedback of these systems would be given through vibration sensors as well as offer pairing with smart devices such as the Apple Watch. More research into the Apple Watch would be needed however we are optimistic that we can develop an application to connect our system to it and give the user an optimal experience. \par
+After speaking with Justin Romack, the Assistive Technology Coordinator at the Texas A\&M Disability Services, who he himself is blind, specified that most people who are visually impaired have trouble understanding their orientation within a room, leading to them wandering in attempt to find their direction. We propose that our system periodically give the user a pulse towards true north. Knowing the direction, after sometime would help our users be more aware of the actual directions they are taking rather than relying on object cues around them to get around. More research will be done into finding more solutions to this issue. \par
+
+We have also proposed that our Smart Cane would be able to easily contact emergency services if necessary. Users should also be able to fill in some preliminary information so that when emergency services are contacted, that information could be given to them immediately through the use of Text-to-911 which is available in College Station and on the Texas A\&M Campus. We are currently contacting Patrick Corley who is the Executive Director for the Brazos Country Emergency Communications District to get more details into what we are able to integrate into our product. \par
+
+\subsection{Design constraint and feasibility}
+ With respect to the product we intend to develop, there are several constraints we need to be aware of as our development progresses. Since we intend to create a device that can be fit onto different collapsible walking canes, we must ensure that the device can house the appropriate hardware and meet our specifications, while still being relatively compact. It also has to remain portable and easy to remove, that way a user can remove and store it  when they collapse their cane. The weight must also be considered, since we don’t want to cause any unnecessary strain on our users’ wrists (or the cane). As far as feasibility is concerned, the design we intend to develop is well within our abilities to develop - given the appropriate time frame. The components we have in mind should leave us with a device that is light, and won’t be cumbersome for the user to use with their cane. Issues may arise, however,  when it comes to keeping everything compact and housed in a casing that can be attached onto a cane, and then removed easily, by a person with a visual impairment \par
+
+\subsection{Marketing Requirement (Customer needs)}
+To tackle the problem of detecting upcoming obstacles, we're going to use a sensor that will detect objects at waist-height and up, and will give a feedback to the user about said object. Since the design will be robust, the feedback given could be auditory or tactile depending on the preference. \par
+In order to help them locate where in a room/building they are, we're planning on using a gyroscope and GPS system. This would give them auditory/tactile feedback to help them know in which direction they're going. Additionally, we're planning on using the Zachary building mobile application as inspiration to develop a similar system for location, since it's really precise. \par
+Finally, to prevent our prototype from becoming too heavy, we're planning on creating an app that will make most of the computation and have it communicate with the cane via bluetooth or wi-fi. This way we don't have to include so many components on the cane.
+
+\subsection{Research of existing/similar solutions}
+In terms of existing products, there are only two that stand out on the current market. The first is the WeWalk which is currently on sale for \$499.99. The other product is the smartCANE which had no listed price but can easily be assumed to be more expensive considering the amount of features it has. \par
+The WeWalk has a fairly basic physical component, featuring sensors that detect anything above chest level (around 165 cm). The main package of features for the WeWalk is in their app component, which allows navigation through Google Maps and also makes use of the virtual assistant on iOS and Android. Detection range and other settings on the cane can also be changed through the app. \par
+For the smartCANE, it features a much wider variety of physical features. Aside from the standard obstacle detection (which is now from knee-height to above the head), the GPS navigation is done through the cane entirely. They also offer real time narration of their environment which includes "items, friends, and family, documents and more”. A button on the side can contact emergency services/family and also sends them your necessary medical info to assist in quick treatment. This goes hand-in-hand with the inbuilt location sharing. The most interesting new feature is the canes ability to detect both light levels in the environment and to also detect the wetness of surfaces in front of it, better assisting the user in a wider variety of potentially dangerous settings.
+\end{document}
