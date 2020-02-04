@@ -7,8 +7,8 @@
 
 
 ## Agenda for the meeting
-1. Talk about our discoveries from the topics discussed in last class. The whole purpose was to know which ideas we should keep for the product, to compare with previously made products while trying to improve them, and start making a list of the cost for the components.
-2. Discard some of the ideas that do not match with our goal/plan. In other words, thinning out all the possibilities we had thought of.
+1. Re-state the problems that are faced by visually impaired people and, following Justin's advice, decide on whether we should focus on a robust system with multiple settings that can be toggled, or try to fully perfect a device with just one of those settings while still fulfilling the requirements.
+2. Try to contact the people that made the mobile app for the Zachry Engineering Building to get some inspiration from their system for detecting where in the building a given user is. This would help us tremendously in trying to incorporate navigation features to the cane.
 3. Make plans for our following meeting and spread assignments amongst ourselves.
 
 ## Overall accomplishments since last meeting
