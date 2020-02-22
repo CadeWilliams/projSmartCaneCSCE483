@@ -1,0 +1,296 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+\title{\textbf{\Huge Smart-Cane}\ \\ \textbf{\Huge Project Proposal}}
+\author{Baltazar Guerra L.\\ Jonathan Williams \\ Matthew Giuffrida \\ Arthur Helmen \\ Shawn Popal \\ \\ \\ \\ \\}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Executive Summary}
+Travel can be significantly more of a challenge for those with visual impairments or blindness than it is for the sighted. Specifically, obstacle detection and navigation are more difficult when the sense of sight cannot be relied on in environments where that capability is assumed. A low tech method of easing this difficulty is to use a traditional white cane. However, this type of cane, which is purely mechanical, cannot fully address the needs presented by travel and navigation. The goal of this project is to create a "smart cane" - a device that attaches to a white cane and provides the additional functionality of indoor and outdoor navigation, orientation, smartphone connectivity, and obstacle detection. \par
+
+The product will be a cylinder, roughly 8 inches in length and 3 inches in diameter. It will utilize two cameras at either end of the cylinder to detect obstacles that may be approaching and warn the user. The device will utilize a gyroscope to determine the user's orientation with respect to an 'anchor point' that they set, and provide feedback back to them about their orientation on request. A Bluetooth connection will be made to the smartphone of the user, and will allow the user to provide additional input to the device via an app on their phone. Finally, a GPS sensor will track the user's location allowing for effective outdoor navigation. All feedback from the device will be provided in either haptic or audio form, depending on the user's preferences. \par
+
+The hope for this product is the make travel safer, more efficient, and more transparent for people with visual impairments or blindness. The capabilities described above will allow visually impaired or blind users to have a better understanding, and confidence in their understanding, of the area around them as they travel, both in indoor and in outdoor environments. \par
+
+\section{Introduction}
+\subsection{Problem Background}
+
+Blindness and visual impairment present natural complications to travel for those who have those conditions. Obstacle detection in particular is an area of concern, as could be expected. One of the most common tools used by those individuals who have visual impairments to assist in travel is a specialized cane, usually referred to as a “white cane” in the United States. These are long canes, usually capable of folding up for ease of storage. They are generally white, as the name indicates, for both ease of visibility for others, and to identify the user as blind or visually impaired. The canes are used by the individuals to identify potential obstacles through sweeping the cane in front of themselves, as well as a form of surveying the environment around them – for example, feeling the bumps on a road that indicate a crossing is there. These canes generally are purely mechanical, with no electronic components. \par
+
+This led to our proposal to create a “smart cane” – a device that acts as a white cane, while also leveraging technology to add to or enhance the basic functionality of the traditional, mechanical cane. The primary goal is to create a device that keeps all of the functionality of a traditional cane, while adding additional capabilities to the core functionality of the cane – that is, to make safe, efficient travel easier for those with blindness or visual impairments. \par
+
+\subsection{Needs Statement}
+In order to have a better understanding of the problems we need to tackle we spoke to Justin Romack who works at Texas A\&M Disability Services (and is blind) so he could give us some insight of his everyday struggles and those of his peers. Through this conversation and separate research, a list of areas of need was identified. Those primary issues are: not being able to detect obstacles that are farther away from their cane or overhead, losing track of one’s spatial location inside of a room or building, indoor and outdoor navigation, and heavy equipment hurting one’s wrist and arm after some time.
+
+
+\subsection{Goal and objectives}
+
+The overall goal of the project is to make it easier and safer for people with visual impairments to travel through everyday environments. To that end, a list of goals was compiled below.\par
+\begin{itemize}
+    \item Current market solutions are very expensive and lack certain quality of life functionality. The product should be relatively low cost.
+    \item Users often become very accustomed to the canes that they use. The product should be able to attach to a variety of existing canes.
+    \item White canes cannot generally detect obstacles at or above chest level. The product should be able to do so.
+    \item The product should be able to connect to, and communicate with, a user’s smartphone.
+    \item The product should be able to quickly and easily allow the user to contact emergency services.
+    \item The product should be able to provide feedback through audio and haptic channels.
+    \item The product should be able to provide directions in an outdoor or indoor environment
+\end{itemize}
+
+
+
+\subsection{Design constraint and feasibility}
+
+There are four primary constraint areas. First, power. The device must be portable in order to perform its function, and therefore must have its own power source with enough charge to be useful to the user. 
+Second, the weight. White canes are designed to be constantly moved around, in order to “feel” the environment. If the product is too heavy, it will quickly tire the user to be moving it around constantly. Since preserving the original functionality of the cane is a key requirement, the device must be lightweight enough to not be a burden on the arms or wrists of a user.
+Third, the size. If the device is too bulky, it can get in the way of the user or make the cane difficult to store. Also, a bulky device would likely have a poor aesthetic, and therefore make the user less willing to use the device.
+Fourth, the function. The device must speak to the key needs identified previously – namely, obstacle detection, navigation, and orientation, among others. \par
+Using these constraints, a list of requirements was drawn up, and can be seen in the table below. \par
+
+\begin{figure}[h]
+\centering
+\caption{Product Requirements}
+\includegraphics[scale=0.75]{requirements_table.JPG}
+\end{figure}
+
+The product at its core is feasible. The hardware requirements are within budget, and components that are capable enough for our needs have been identified. The largest possible issue is in fitting the performance of the product into the maximum tolerances we have identified. In particular, the area that is both the most difficult and the largest possible differentiating factor for the product is the indoor navigation. While we have done enough research to believe that reaching our goal is feasible, it is the most likely of the functionalities present to present the most difficulties in performing consistently within our margin of error.\par
+
+Another area of potential difficulty is the image recognition system used to detect overhead obstacles. This system has a great deal of complexity in order to address the complex problem it is aimed at solving, and thus has many possible places for the tolerances to start becoming strained.\par
+
+%\subsection{Marketing Requirement (Customer needs)}
+%To tackle the problem of detecting upcoming obstacles, we're going to use a sensor that will detect objects at waist-height and up, and will give a feedback to the user about said object. Since the design will be robust, the feedback given could be auditory or tactile depending on the preference. \par
+%In order to help them locate where in a room/building they are, we're planning on using a gyroscope and GPS system. This would give them auditory/tactile feedback to help them know in which direction they're going. Additionally, we're planning on using the Zachary building mobile application as inspiration to develop a similar system for location, since it's really precise. \par
+%Finally, to prevent our prototype from becoming too heavy, we're planning on creating an app that will make most of the computation and have it communicate with the cane via bluetooth or wi-fi. This way we don't have to include so many components on the cane.
+
+%\subsection{Research of existing/similar solutions}
+%In terms of existing products, there are only two that stand out on the current market. The first is the WeWalk which is currently on sale for \$499.99. The other product is the smartCANE which had no listed price but can easily be assumed to be more expensive considering the amount of features it has. \par
+%The WeWalk has a fairly basic physical component, featuring sensors that detect anything above chest level (around 165 cm). The main package of features for the WeWalk is in their app component, which allows navigation through Google Maps and also makes use of the virtual assistant on iOS and Android. Detection range and other settings on the cane can also be changed through the app. \par
+%For the smartCANE, it features a much wider variety of physical features. Aside from the standard obstacle detection (which is now from knee-height to above the head), the GPS navigation is done through the cane entirely. They also offer real time narration of their environment which includes "items, friends, and family, documents and more”. A button on the side can contact emergency services/family and also sends them your necessary medical info to assist in quick treatment. This goes hand-in-hand with the inbuilt location sharing. The most interesting new feature is the canes ability to detect both light levels in the environment and to also detect the wetness of surfaces in front of it, better assisting the user in a wider variety of potentially dangerous settings.
+
+\section{Literature and Technical Survey}
+\subsection {SmartCane}
+This is a device that is able to be fitted onto the end of a traditional collapsible cane. It acts as a handle, and can detect obstacles from knee to head height. It has different detection range settings, one for close range (1.8m),  and one for long range (3m), which is intended to help the device work in different environments (indoors, outdoors, crowds). It has a high sensitivity, their website says it can detect an 3cm wide object from 3m away. It uses non-localized vibration feedback in the handle to inform the user of obstacles. This device is available for $ \$90$. This is the most similar product we found to what we intend to complete. Although we hope to include additional functionalities, like indoor navigation, and localized vibration feedback. \cite{SmartCane}
+
+\subsection {UltraCane}
+
+This device is a commercial product that is currently available for purchase. This cane is meant to replace the traditional collapsible cane often used by people who have visual impairments. It uses two ultrasonic sensors for obstacle detection. One of these detects obstacles waist-down, and they claim it can detect obstacles 2-4m ahead of the user. The second sensor detects waist-up obstacles, with a range of up to 1.5m ahead/above the user. There are also two vibrating thumb buttons that relay obstacle detection to the user, the buttons vibrate to indicate direction, and the frequency they vibrate at indicate proximity. The cane is fairly portable, it can telescopically retract up towards the handle, but it ends up being less compact than a normal collapsible cane. It is sold for $ \$762.20$, which is more expensive than we would like our product to be (should it go into commercial production). \cite{UltraCane}
+
+\subsection {Smart Stick}
+
+This is a research product that combines a smart cane with an android application. The cane uses three ultrasonic sensors to detect obstacles, as well as potholes, with a 400cm range. The cane uses an arduino to do the distance calculations, then uses the android app to give text-to-speech feedback to the user. The user can also use the application to call emergency contacts, by drawing and assigned gesture onto the screen the app can call the appropriate contact. A destination can also be input, it does not provide navigational instructions, it only alerts the user once they have arrived. \cite{SmartStick}
+
+\subsection{Sound and Touch Based Smart Cane}
+
+This was a research project that didn’t actually assemble the cane, but they did test all the sensors they intended to use. This project used ultrasonic sensors to detect both stationary, and moving objects. If an obstacle was detected close (d $<$ 50cm)  the user a “stop” command would be verbally communicated through an android app. If an object was far (50cm$<$d$<$100cm), then an “object” command would be communicated. If a moving object was detected moving towards the user, then the handle would vibrate- intensity of the vibration would indicate the speed of the object. A heat sensor was also added to detect hot objects if the user placed the tip of the cane onto the suspected hot object. The idea of detecting moving objects is a good function to add to a smart cane, I don’t believe an ultrasonic sensor is appropriate for this, it’s unable to detect an object and make sure it is tracking the same object as it moves towards the user. \cite{Sound}
+
+\subsection{Robot-Assisted Indoor Navigation} 
+
+A research project that used a robot that interacted with RFID tags, set up in an indoor space, that a visually impaired person could use to be guided through a building. The robot was successful in its task, but had trouble re-routing a user if there was an obstacle blocking its planned path to an RFID tag. The use of RFID is interesting, and this was one of the only projects we found that attempted to guide a visually impaired person through an indoor area. The problem is that an RFID network must be in place for the robot to interact with, a user wouldn’t be able to take a device with such capabilities anywhere they wanted. The robot also used sensors to detect blockages, and attempted to move around the obstacle, but it wasn’t able to find a new path unless there was another RFID tag it could detect. \cite{Indoor}
+
+\subsection{Haptic Assistive Bracelets for Blind Skiers}
+
+These researchers explored the use of vibration motors in a visually impaired person’s ski poles, so an instructor could relay turning instructions from buttons on the instructor’s poles. Normally, a visually impaired person has to ski behind an instructor and listen to voice commands, but these researchers were able to successfully guide their test subjects using haptic feedback. This is promising since we hope to be able to have haptic feedback present - not only for obstacle warning- but also for navigational cues. \cite{Haptic}
+
+\subsection {Our Development Direction }
+
+We hope to integrate a lot of the functionalities mentioned above into our final product. We will be using ultrasonic sensors for detecting objects, like many of the examples discussed above, but we will also integrate cameras for added obstacle detection (and to be able to recognize things like crosswalks). We also hope to keep the cost down, to ensure affordability, without compromising our device’s effectiveness. Unlike many of the solutions we found (except the SmartCane) we hope to create device that can fit onto the end of a collapsible cane, so the user can still experience the portability of a traditional cane
+
+
+\section{Proposed Work}
+\subsection{Evaluation of alternative solutions}
+Our initial idea for the overall project was to make an actual cane that would have all this features. However, we decided that it would be better to instead make an attachment that could be put into existing canes. This way we can tackle a larger crowd, reduce the cost on our end, and not change their routines too much by having a whole new cane.\par
+
+Initially we were thinking of using Wi-Fi to send the feedback from the cane to the smartphone or smart-watch. However, due to the fact that at times the Wi-Fi on campus will fail and also due to having to hop in between routers, we decided that a more consistent option would be to use Bluetooth. Justin had told us that most visually impaired people (that he knows) will always carry their smartphones and smart-watches on them, so this helps to ensure that there will always be a stable connection in between their devices and the cane. Similarly, it's better for whenever the user is moving inside of a building.\par
+
+While it is good that we're using the sensors to detect the incoming obstacles, it's not a good idea to have that as the only source of input. Hence, we decided to use 2 cameras to aid in detecting the obstacles. This will help in case the sensors malfunction, and will also be able to measure the depth so it can have a more accurate measurement.\par
+
+Our cane will be able to direct people inside of a building form point A to B. While this will be very useful, we're also implementing a "breadcrumb" system that the user will be able to use in order to leave a "trail". By doing so, the cane can retrace their path whenever they have to leave, and will be "picking up the breadcrumbs" along the way. It's an addition to the mapping inside of buildings so it's more efficient.\par
+
+Finally, after speaking with Justin, we came to the conclusion that different users will prefer different types of feedback. Some users rely too much on their hearing, so audio feedback can result disturbing to them. Similarly, some other users rely more on the sensation from their cane, so them using haptic feedback could result problematic. This is why we decided to go for a robust system rather than a fixed system. With this, users can change the settings and select which type of feedback they will receive.
+
+\clearpage\subsection{Design Specifications}
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.8\textwidth]{level0.jpg}
+ \captionof{figure}{Level 0 Diagram}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+The main module for this will be the cane-mountable device itself. All the sensors will send their inputs into the cane, from which the internal computer will process the incoming data and react appropriately based a multitude of factors. Human input will also be a factor, as such features like the waypoint drop system will require input on when the waypoints should be dropped along with determining when to retread the dropped waypoints. The can will be using a combination of vibration motors and speakers to deliver the haptic and sound-based feedback respectively. \par
+The other module is the optional smartphone connection available via Bluetooth. The smartphone is responsible for providing GPS data to the cane so that it can operate most of its features including the waypoint system. The smartphone is also where most of the user settings will be changed, depending on how the user would like to receive their feedback from the cane. Finally, the smartphone can mimic the haptic and sound feedback from the cane should the user desire so. \par
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{level1.jpg}
+ \captionof{figure}{Level 1 Diagram}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+This diagram takes a closer look at the internal components of our cane module. All of the sensors and the Raspberry Pi itself will receive power from an external power source, a rechargeable battery pack. Those sensors will then feed info constantly into the Raspberry Pi. From outside the system, the Pi is receiving various forms of user input along with the GPS data from the smartphone. The Pi then processes the data, determines the appropriate action to take, then broadcasts that action to the user through both the haptic feedback motors and the speakers. The data from the smartphone connection will control how this data is processed as that is where users can change and personalize the settings of their device to best suit their daily needs. \par
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{level2.JPG}
+ \captionof{figure}{Finite State Diagram}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+This diagram describes some of the possible actions the cane will be able to take. On startup, the cane will attempt to make a Bluetooth connection with a smartphone if there is one already paired along with anything else needed to startup. A small vibration will alert the user when startup is finished and then the cane will enter the "idle" state. \par
+
+In the idle state, many of the unneeded sensors like the gyroscope and GPS data will be turned off to save on power and extend battery life. The only real smart features active in this state are the ones necessary for object detection. Whenever an object is detected, the user will be warned by some form of feedback. Once the obstruction is cleared, the cane returns to the idle state. \par 
+
+Should the user want some sort of navigational assistance, then the cane will enter "nav mode" where the cane is able to take full advantage of its sensor suite. This mode is where some of the cane's unique features like the waypoint system are housed. The gyroscope will be responsible for determining the orientation of the user and guiding them along the path to their destination. At turns, the cane will provide feedback to indicate to the user which direction to head in. The cane will also automatically leave waypoints at certain intervals, along with allowing the user to set additional ones as needed. Once navigation is finished, the user can choose to follow their waypoints set earlier to go back where they came from, or to discard the waypoints and head down a new path. \par
+
+\subsection{Approach for design validation}
+This project will use multiple components at once that need to work optimally to accomplish our goal. Due to the time constraint that we have, we must ensure that each step of our project works to prevent major drawbacks because of unnoticed bugs or faults. In order to ensure the success of this product, we will be testing each component as we receive it. Additionally, we will do extensive testing on our implementations and features that will be added, such as the "breadcrumb" system and mobile app. \par
+
+First off, we need to make sure that our sensors, cameras, and Raspberry Pi are working properly. If this stage was to be faulty, then the entire project would already be a failure. We will make many tests for each component to make sure that they are getting the expected readings. Additionally, we will initially test the battery life to make sure it can last more than 3 hours. \par
+
+Later down the line, as we're developing the iOS App, we will make sure that a stable communication is set between the smartphone and the cane. This is key since it will take a major role in making our system robust and also in having the user choosing where to go and receiving feedback. Similarly, we will make sure that they can contact emergency services (both from campus and 911) using the cane system. \par
+
+Once we have a physical prototype, we will perform many tests to check that the cane can guide us through a building and also outside of campus. For example, one of the tests will be to check if we can be directed properly from the entrance of a building to a room. Additionally, we would test the breadcrumb system as we enter. The system would leave the breadcrumbs on every sharp turn or when left by the user (with the app). Afterwards, we would try to make our way back to the entrance using only the breadcrumbs. This way we can test if both of those components work (both individually and combined). Since we also have the contact of a campus staff member who is blind, we will ask him to give us his insight on the efficacy of the cane as he tests it out as well. We will take into consideration any improvements he thinks we can apply. \par
+
+Finally, we will test the overall robustness and stiffness of the cane to make sure that it's durable and that the settings can be changed to fit each user's preferences. We will go about this by walking around campus and on rough terrain, making sure that we do put some stress on the cane to ensure that it can stand being used on a day-to-day basis. Similarly, we will change the settings along the way to make sure that the feedback selected is given back to the user.
+
+
+
+\section{Engineering Standards}
+\subsection{Project Management}
+Even though every team member shares similar skills that will help the team succeed, there are specific areas that best fit the interests and strengths of each individual member. With a project as extensive as this and with a time constraint of just around 2 months, it is key for the team to stay in touch and keep everyone updated on their progress. \par
+
+\textbf{Baltazar Guerra} was assigned to lead the team and collaborate on the overall system and software design. His previous experience in managing the deadlines and roles for group projects like those of CSCE 315 and non-Engineering courses will help him manage the team. Additionally, his experience from summer projects will help in the software design of the system. \par
+
+\textbf{Shawn Popal} will take charge of the app development and finance, along with collaborating in the overall software design. His interest in working in iOS mobile apps will be very beneficial for the team in making the cane communicate with the smartphone and smartwatch.
+
+\textbf{Matthew Giuffrida} will work primarily in hardware, prototyping, and testing, with additional work in software as needed. His previous experience working with a Raspberry Pi will help him in this role, as well as his previous experience utilizing OpenCV and cameras on a RasPi. \par
+
+\textbf{Arthur Helmen} will primarily work on the hardware portion on the project, testing sensors, working with the Raspeberry Pi,  assembling the physical components of the device, and ensuring the device meets the set physical requirements. His previous hardware experience in classes like CSCE 462 (microcomputer systems) will help him in his role. He will also be available to work on any other portions of the project that may need assistance. \par
+
+\textbf{Jonathan Williams} will focus on Software design and prototype testing. His previous experience on ensuring communication between the hardware and software for his project in a Microcomputers course will help the team in settling the connection between the Pi and the output devices and smart devices. Additionally, his experience in debugging software at Perfection Wholesale will help the team in finding any errors early on.
+
+% Please add the following required packages to your document preamble:
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+
+
+
+
+\subsection{Schedule Tasks}
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{gantt.png}
+ \captionof{figure}{Gantt Chart}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\subsection{Economic Analysis}
+\begin{itemize}
+    \item Economical Viability:\\
+        In terms of cost versus current market solutions, our product would not only be significantly cheaper, accounting for retail pricing with a large profit margin, but would also provide much more functionality. Being able to purchase our components in high volume will also help drive down the cost of individual components, particularly with the microprocessor and cameras which hold the bulk of the cost. Once our product design is finalized and moved out of the prototyping phase we can rely on a specific solution for our microprocessor rather than using the Raspberry Pi which is relatively expensive for the amount of code we are going to be running.
+    \par
+    
+    \item Sustainability:\\
+        Our selected components are available from a variety of part vendors making it easy to source them in the case one of the current vendors we are using discontinues a component. No maintenance will be required for our product and due to the components being readily available and inexpensive, repairs can be made in a cost effective and be done in a timely manner which would greatly extend the life span of our product and the satisfaction of our customers. 
+    \par
+    
+    
+    \item Manufacturability:\\
+        The parts that we selected are easily compatible with each other. The cameras having a simple direct connection to our Raspberry Pi and our sensors containing very few wires and connecting directly to the Raspberry Pi's general purpose i/o pins. With this low complexity, the footprint in combining the components will be low and thus making it easy and quick to manufacture this product. 
+        
+    \par
+    
+\end{itemize}
+
+
+\subsection{Societal, Safety, and Environmental Impact}
+\begin{itemize}
+    \item Societal Impact: 
+
+This product is intended to improve the lives of those who are visually impaired on the Texas A\&M campus. Being able to easily navigate to and from any building on the campus will greatly improve the student and staff experience as they no longer will have to rely on other individuals to help guide them along the right path. With being able to get to their desired destination quickly, they can focus more of their time on the more productive aspects of their lives and achieve more in that regard whether if they are a member of the staff or a student. \par
+
+    \item Safety: \\
+Naturally, with a product that guides visually impaired individuals, safety is the number one concern when it comes to design particularly on a college campus. There are many unpredictable variables such as buses, utility vehicles, people, and construction, all of which change throughout various times of the day. It is important that there are fail safes to allow the user to traverse the campus not only safely but as well as adapt in the case a particular route becomes unavailable due to construction, or an event is being held, or a particular bus route gets moved suddenly. \par
+
+    \item Environmental Impact: \\
+Our system will be powered solely by a rechargeable battery which will minimize the environmental impact that this product will have. Due to the nature of this product, being a computer based system with simple sensors and cameras, environmental impact is of little to no concern. \\
+
+
+\end{itemize}
+\subsection{Itemized Budget}
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{budget.png}
+ \captionof{figure}{Itemized Budget}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+
+\section{References}
+\begin{thebibliography}{9}
+\bibitem{SmartCane} SmartCane, "What is SmartCane", http://smartcane.saksham.org/overview/, (2016)
+\bibitem{UltraCane} UltraCane, “About the UltraCane,” http://www.ultracane.com/about\_the\_ultracane, (19 July 2014)
+\bibitem{SmartStick} H. R. Shaj, D.B. Uchil, S. S. Rane, P. Shete. "Smart Stick for Blind Using Arduino, Ultrasonic Sensor and Android". Department of Computer Engineering K.J. Somaiya College of Engineering, Mumbai India. International Journal of Engineering Science and Computing, April 2017. 
+\bibitem{Sound} R. K. Megalingam, A. Nambissan, A. Thambi, A. Gopinath, and M. Nandakumar, Sound and touch based smart cane: Better walking experience for visually challenged, 2015.
+\bibitem{Indoor} V. Kulyukin, C. Gharpure, J Nicholson, and S. Pavithran. Rfid in robot assisted indoor navigation for the visually impaired. 2004 IEEE/RSJ International Conference on Intelligent Robots and Systems, 2004.
+\bibitem{Haptic} M. Aggravi, D. Prattichizzo, G. Salvietti, “Haptic Assistive Bracelets for Blind Skier
+Guidance” , AH ‘16: Proceedings of the 7th Augmented Human International Conference 2016.
+\end{thebibliography}
+
+
+
+\section{Appendices}
+The "Work Breakdown" can be found in the Github under "Submissions/Proposal/'Work Diagram.pdf'".\par
+The data sheet included is that of the GPS Module. It can be found in the same Github folder under the name of "GPS Module Datasheet.pdf". We're using this since it will be very helpful in using the "EASY" embedded system to help when indoors. This system calculates and predicts the location whenever there's not enough information from the satellites.
+
+
+\section{Bios and CV's}
+
+\textbf{Matthew Giuffrida} is a senior Computer Engineering major at Texas A\&M University. He has interned with the Department of Defense, where he worked on projects in the areas of machine learning, artificial intelligence, and data analytics. In his time at A\&M, he has completed coursework and projects in a variety of areas, including network security, microcomputer systems, and artificial intelligence. He built a monitor mount that used face recognition and tracking software to allow a monitor to independently follow a user. Matthew is in his final semester at A\&M, and plans to accept a position as a software developer at Epic Systems upon graduation. \par 
+
+\textbf{Jonathan Williams} is a senior Computer Engineering Major at Texas A\&M University. He was treasurer-elect at the Texas A\&M Virtual and Augmented Reality club for 2 years and was in charge of financial for the entire club. He will be receiving a minor in both cybersecurity and Japanese, and spent the summer of 2019 at an internship in Japan assisting at Kyorin University. He has completed a variety of coursework  at A\&M especially related to his minor. He developed a pair of smart glasses that was able to identify either objects or text, and if text was found it automatically translated the text to English and read it aloud to the user. \par
+
+\textbf{Baltazar Guerra} is a senior Computer Engineering major with a Mathematics minor at Texas A\&M University. He was the treasurer of the Student Association of Latino Leaders (SALL) in Texas A\&M Galveston and was in charge of keeping track of the budget for the organization's events during the Spring semester of Freshman year. In the summer after Sophomore year, he took part in developing a module for an automatic irrigation system that would set different times to water separate sections of large crops which would be tested in Mexico. During the summer after Junior year he took part in the making of the prototype and software of an eco-friendly AC Unit for trucks. During his Senior year he worked in a team to make a virtual version of the board game "Risk" as part of a Computer Science course. \par
+
+\textbf{Arthur Helmen} is a senior Computer Engineering Major at Texas A\&M University. He has experience in both software and hardware and has completed projects relevant to both of these categories. Namely a spinning LED display, that was focused on hardware, that used an arduino which controlled LEDs on a spinning frame that displayed different images. Software focused projects include a web application that could scrape a twitter accounts tweets for an emoji chosen by the user, and see how often they used it, as well as choose an account and identify a users general "mood" based on commonly used emojis. His degree focused on software systems, information, and microcomputer systems.\par
+
+\textbf{Shawn Popal} is a senior Computer Engineering Major at Texas A\&M University. He has experience in developing both software and hardware solutions from a variety of projects that he has taken part in during his time at Texas A\&M. Primarily working with professor Dr.Cable Kurwitz of the Nuclear Engineering Department in the development of a portable area radiation monitor which sought the use of the Raspberry Pi micro-computer to gather information through various sensors, transmit that data across the campus' wifi to a designated Raspberry Pi that served as the database. This information was then graphed in real-time and hosted on a local webpage that could be observed from anywhere with a campus wifi connection. This project was presented twice at the Health Physics Society conference, once hosted in College Station and once at the University of Houston where it won 3rd place prize.  \par
+
+\includepdf[]{giuffrida_resume.pdf}
+\includepdf[]{jonathan_resume.pdf}
+\includepdf[]{baltazar_resume.pdf}
+\includepdf[]{helmen_resume.pdf}
+\includepdf[]{Shawn_resume.pdf}
+\end{document}
+
