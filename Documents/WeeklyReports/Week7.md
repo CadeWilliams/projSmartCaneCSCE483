@@ -20,11 +20,11 @@
 
 | Task description | Assigned to | Completed? |
 | --- | --- | --- |
-|  Meeting with Justin to get user insight   |  Baltazar Guerra L.  | Yes |
-| Review and submit the problem statement | Matthew Giuffrida | Yes |
-| Gather details and use them on the problem statement | Shawn Popal | Yes |
-| Meeting with Justin to get user insight | Jonathan Williams | Yes |
-| Gather details and use them on the problem statement | Arthur Helmen | Yes |
+| Made Ghant charts and scheduled milestones for this project. |  Baltazar Guerra L.  | Yes |
+| Made sure that all the components needed were put in the list before the Purchase Request. | Matthew Giuffrida | Yes |
+| Filled out the Purchase Request after gathering all the costs. Keeping track of expenses. | Shawn Popal | Yes |
+| Made diagrams for the Design specifications. | Jonathan Williams | Yes |
+| Compile a list of existing products that we can use for comparison. | Arthur Helmen | Yes |
 
 
 ## Plans for next period
@@ -48,6 +48,7 @@
 | | Arthur Helmen |
 
 ## Project management status
-1. Now that we have a better understanding of what problems our target audience faces, we have been able to focus on our initial ideas that do tackle these problems. We will come to a concensus on whether we should make a robust system, or just focus on perfecting a specific aspect of the cane.
+1. Currently we are waiting on getting our Purchase Order approved so we can order the components and start testing them. On the meantime, we are ensuring that we all are in the same page in terms of how this product will work and how the components will come together. Also, we will be polishing the overall design and start working on the software design.
+2. Now that we have a schedule of milestones we need to meet, we have a rough estimate on how long each portion will take and are able to split the work more efficiently.
 
 ## Minutes from previous meeting
