@@ -21,7 +21,7 @@
 | Task description | Assigned to | Completed? |
 | --- | --- | --- |
 | Scheduled follow-up meeting with Justin C. Started getting familiarized with the Google maps UI. |  Baltazar Guerra L.  | Yes |
-| Made sure that all the components needed were put in the list before the Purchase Request. | Matthew Giuffrida | Yes |
+| Created initial designs for the software interface and layout. | Matthew Giuffrida | Yes |
 | Started the layouts for the UI for the iOS app. | Shawn Popal | Yes |
 | Setup Raspbian in Raspberry Pi for testing and implementation. | Jonathan Williams | Yes |
 | Found a replacement for the speaker component that was out of stock. | Arthur Helmen | Yes |
