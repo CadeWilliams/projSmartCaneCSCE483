@@ -1,0 +1,135 @@
+[Baltazar Guerra]
+22:18:03 Morning everyone, I hope everybody's doing well.
+22:18:07 We are the team smart Kane and this is our critical design review, I'm Baltazar Guerra.
+
+[Jonathan Williams]
+21:22:51 I am Jonathan Williams.
+
+[Arthur Helmen]
+I am Arthur Helmen
+
+[Shawn Popal]
+Hi everybody, my name is Shawn Popal
+
+[Matthew Giuffrida]
+21:13:07 This is Matthew Giuffrida
+21:13:22 The problem is as follows navigation is something that we take for granted. That can be a major concern for people with visual impairments or completely wanted one of those common tools used to run me to remedy this by people with those impairments is
+21:13:37 a white cane, which is also a very recognizable tool for, for people who are visually impaired.
+21:13:45 The goal of our project is to upgrade awaking with additional functionality.
+21:13:49 Specifically, we would like to provide directions through audio haptic feedback, integrate with smartphones, allow for in building navigation orientation, as well as quick access to emergency services,
+21:14:02 there are obstacles that traditional white cane is simply not able to detect also orientation side of room or a building, can be difficult for your visual impairments.
+21:14:13 As the texture of the floor can often be similar in different areas.
+21:14:19 The goals of our project or to provide robust consistent detection and obstacles in the path of the user, we clear directions the user that leverages the accessible from the features of campus, specifically, as well as providing orientation and directions
+21:14:32 inside of the building on request.
+21:14:36 And finally, allowing the user to quickly contact emergency services in the case of emergency, emergency situation arise,
+21:14:45 or objectives can split the three primary areas portability functionality and flexibility.
+21:14:52 Namely, you the product must be portable, so the user can take it wherever they need must be functional, providing all the functionality previously described, you must be flexible, that user can edit it and adjust it to fit whatever needs they may have.
+21:15:07 We build a list of requirements to best describe this these needs.
+
+[Baltazar Guerra]
+22:18:40 Now I'm gonna talk about the design alternatives.
+22:18:39 So our first we had decided, or were chose, like we showed on our previous presentation, that we were going to use Bluetooth but for better stability in general we ended up opting for using Wi Fi since it's just faster and more reliable across campus or
+22:18:55 outdoor navigation and also indoor navigation.
+22:19:00 We're also going to use a camera to aid in the detection rather than having the sensors being the only type of feedback that we're going to get from the environment.
+22:19:10 We're still planning on using the breadcrumb system to aid them on tracking back the steps inside of a building, and we're still working on making the system very robust so they can toggle options, just in case like they rather have audio or haptic
+22:19:30 feedback. And something that's just a change that just came up recently to our current circumstances was the instead of using the Tamu application, we're going to end up using Google Maps application because transportation services right now is really busy
+22:19:47 due to everything that's going on right now. and they haven't reached back to us with an API. So we're going with Google Maps and it's also a very viable option since it's very, very useful and very useful.
+
+[Jonathan Williams]
+21:22:57 System description, not much has really changed since the initial proposal.
+21:23:02 The only major change in our design or level zero is that we swapped out the light sensors for human input into the smart King, we found that there wasn't really a place for the light sensors in our project, and from the feedback we received we realized
+21:23:15 that we've forgotten to include human input into arcane itself.
+21:23:19 The same can be said for the level one, the only real change is the swapping of light sensors to human input everything else has remained the same.
+21:23:26 For our finite state machine, of how the, they will operate.
+21:23:31 Nothing has changed it will still stand most of its time in idle, which has the lowest power consumption, opting to warn users about incoming objects or having a navigation mode, but overall, they will always return back to the idol sequence for a luminary
+21:23:48 results.
+21:23:59 work done and work in progress we are AP is well underway, software design mockups were created screen layouts were put together, and we are in the process of integrating contest to map APIs.
+21:24:00 Hardware has been significantly delayed by recent events and components, despite all that, components have, we managed to test the components we were given.
+21:24:10 We're preparing to begin working on building a more robust prototype however we can.
+21:24:16 The first test we did where the testing the cameras.
+21:24:19 From left to right, we have called them long lens, the 1.3 v 2.1, the testing environment we held them about six to eight inches away from a bottle of shampoo, and that was to determine how well the quality of the images were, we would use the text to
+21:24:35 terminate a quality.
+21:24:37 image quality. The first one, this is the picture taken with a long lens, as you can see has a very wide angle lens capturing not on the bottle of shampoo but my Pokemon stuffed animals to the left, and my monitor, both of my monitors
+21:24:50 the image quality is also very high as you can make out the text fairly easily.
+21:24:55 The next one, this is the image from the 1.3, as you can tell it is a much, much narrower angle lens, not capturing as much. And it also seems to have trouble focusing on things closer like the bottle of shampoo.
+21:25:09 As you can see in the background the torture doll is still much a much clearer quality than the bottle of shampoo right in front of it.
+21:25:17 The two foot one has the same issues and it hasn't even worse focusing problem I had to.
+21:25:21 This is the clearest I can get it on the shampoo bottle.
+21:25:24 And I had to move it even further back and additional for so inches and it still came up very blurry on the closest bottle over images in the back are still fairly clear crystal quality.
+21:25:36 As a result, long lens has the best quality, and it has a much wider angle lens v 1.3 and V 2.1 have the second best quality. The image resolution is slightly lower, and they both have trouble focusing on objects closer to them and be to put one hasn't
+21:25:58 However, this is well within our estimates as we will be warning users about upcoming objects, much, much more advanced than six eight inches from the camera itself so users shouldn't have to worry about, we won't have to worry about things getting that
+21:26:13 close for the battery test we charged with the battery and plugged it in and started timing from there. The battery has four pips each indicating 25% of the battery life remaining.
+21:26:25 When the first tip was dark. That was the first one to 5% taken up three and a half hours had elapsed so extrapolate from there we determined the battery can last around 13 hours when idling and more realistically around nine hours on a standard load
+
+[Baltazar Guerra]
+22:20:14 I was in charge of making some tests to the for the sensors, and in this picture you can see a small Arduino code. And on the left side of the screen on the right side you can see the, the feedback on the sensor it's telling you this is on centimeters.
+22:20:29 I was using it, just around the room, and just like how it could detect this and it was pretty, pretty accurate and and on every on at any distance below five feet, then about five feet we got some variation of about a max of 10%.
+22:20:46 I kept testing it trying to move it mimicking the, the movement of somebody using a cane, and it still gave a pretty consistent feedback.
+22:20:55 This picture is just for illustration purposes of what I was doing to the distance and I also took it around the room around my room and trying to see if it will detect objects like my dad, my computer, and it did the tech, and so it shows that we can
+
+[Shawn Popal]
+15:46:59 This is some of the progress that we've made on our project.
+15:47:04 We've developed an app to tie directly with the hardware aspect of our project to help our users, particularly with this and navigate outdoors. So, as you can see here is, here is the entire story what are the applications pretty simple, just because
+15:47:21 we don't want anything too complicated for people who have visual impairments.
+15:47:27 That's why you see the double button layout, like this just because it's much easier to move your thumb left to right, rather than as top to bottom. So just like an ease, ease of use thing.
+15:47:40 So, navigation button is going to bring you over to this view controller where it's going to ask you to select between outdoor indoor and once you make a decision.
+15:47:50 Currently, I've been working on the outdoor navigation will get second indoor will take you to under every controller but as So currently, to be determined settings.
+15:48:03 This will just have like a list of settings we still haven't decided, exactly how we're going to display those settings. However, it should be pretty simple to transfer the information gained, which probably will be in the form of like switches.
+15:48:18 From this view controller to the, to the controllers that are actually going to be doing the work.
+15:48:27 So once. So currently, users can navigate to the outdoor new controller.
+15:48:34 And this is where it's going to allow you to do billing selection so there's actually two hidden buttons, it's lagging a little bit. Yep. So here's one of the buttons and here's the other one to hit him buttons that simulates the selection gesture.
+15:48:51 So So clicking left hand side and then swiping right out of this little area will select whichever building, which will be displayed with this interview and the name of which will be right here, you'll see when I showed the demonstration.
+15:49:20 And I'll voice out currently by default voices out whatever building it is.
+15:49:17 I'm pretty sure it's going to stay that way too because I don't know how else you would be able to know.
+15:49:22 But when you can click on this side, on the right hand side and swipe left, swipe through the buildings.
+15:49:29 And then once your selection is made by clicking on the left hand side and swiping right.
+15:49:34 You will be brought to this view controller where it pulls up Apple Maps, and I'll show you the route that connects you to the building it selected, my end this grabs the current the users current location and
+15:49:52 asked, Apple servers to develop the route to location. And here's the simulation so we have our side so we're going to do navigation we're going to do, outdoor banchory Engineering Center, so it's going to voice out whichever building your end, and I'm
+15:50:08 going to click on, I wanna, I don't want this building say I want a different building I'm going to click on the right side. Emerging Technologies building.
+15:50:16 Okay, I want this is the building I want to I want to click on the left side and swipe right.
+15:50:22 So exit no route actually appears because I can't simulate my current location I normally test this on my own device so that's why I can see the actual results.
+15:50:31 But what should happen, and the users case is a you'll see the actual route be generated, similar to how like whenever you type in something and then or type in some into Google Maps or Apple Maps that and you hit search.
+15:50:44 The route shows up the best route shows up and then from there onwards you start the navigation.
+15:50:49 I was API isn't very helpful in terms of step by step navigation it gives you this, but it only gives you like the hard steps where, oh I need to turn on the street or on a turn right on the tree.
+15:51:03 It doesn't tell you that you need to take a certain amount of gives you the distance but I didn't tell you oh I need to go this many steps, more forward on on in this particular direction on the street.
+15:51:15 It just doesn't give you that information so for that reason I think we're going to switch to Google Maps, just because and rely on the application.
+
+[Arthur Helmen]
+22:17:13 For projects designed validation and demonstration, we have a couple of pending acceptance test cases to ensure their device ends up working correctly.
+22:17:24 First we have a test for the obstacle detection system will test it by just making sure that it can detect obstacles in front of us in front of the sensors devices consistently Warren the user us with the haptic feedback centers within our intended detection
+22:17:40 radius, then we can categorize it as functional for our user navigation function, we can test that it's working properly by just selecting different locations, and having the navigation correctly lead us those negation locations with cues given to us
+22:17:58 us by the cane
+22:18:02 or indoor navigation. We contested by setting anchor points, marking them on the floor. While we set them and then make sure we lead back to the marketing, we made for the emergency contact.
+22:18:17 We made for the emergency contact. We will just make sure that the button works and can go from the pie to the app and then call the users emergency contact.
+22:18:26 For demonstration, we will probably end up having to do a video demo, since we may not be able to demonstrate a person because of the whole coronavirus deal.
+22:18:38 The video will be split up into following parts demonstration of our emergency contact function demonstration of our obstacle detection and demonstration where location navigator and demonstration of our indoor navigation.
+22:18:51 For the emergency contact function, a simple video of a team member pressing the button on the cane and then showing their phone, have making the call, through the app for the obstacle detection in indoor outdoor area can be set up with cardboard box
+22:19:06 obstacles or chairs, than one of us is shown blindfolded navigating through the area with the cane audio feedback we turned on so the cues can be heard on camera.
+22:19:17 For the location navigator.
+22:19:19 For led to go on campus, then we can fill with blindfolded user choosing a close location.
+22:19:24 That way the video isn't too long and then having the accused direct them to that building for the indoor navigation, a room will be set up with access taped to the floor and will be filmed walking in setting an anchor at each x parking.
+22:19:38 Then we will put a blindfold on this orient ourselves so we don't know where we are in the room, and then use the app to find our way back slapping the cane, using the qZ of interest by the cane.
+
+[Matthew Giuffrida]
+21:15:34 Now, for the engineering standard session
+21:15:39 roles in the team are as follows.
+21:15:41 Both starts the team leader is primarily working within the system and software design.
+21:15:47 Sean is primarily taking primarily working within the software design, is it doing in regards to the iOS app, as well as the finance and purchases.
+21:15:56 Arthur is taking responsibility for the Harper and circuit design, as well as the overall testing, myself, Matthew, and primarily involved in the hardware and software design, as well as prototype testing and Jonathan is also primarily important software
+21:16:11 design, as well as prototype testing
+21:16:16 or objectives or objective trainees probably split into three areas of concern over design software design and product design, design, encompasses the component testing, as well as the actual housing and device software design is slipping to the most
+21:16:32 areas, doing indoor and outdoor navigation, the iOS, and the opposite detection system.
+21:16:38 And finally, We also have power design.
+21:16:43 Here you can see our Gantt chart.
+21:16:45 We've made significant progress regards to the component testing.
+21:16:50 Only a few minor hiccups.
+21:16:52 We've also made decent progress in regards to iOS app.
+21:16:56 Yeah, however, sold out someone on the hardware side of things as a result of recent events.
+21:17:02 But as we began to pick up and become adjusted to the new situations that should be going to pick up speed as well.
+21:17:10 For a current economic analysis. When the biggest just promote the products currently on the market is that they price out a great deal of users since they're very expensive.
+21:17:18 One of the hopes for our project is that it can potentially be a much cheaper solution to solve similar issues, that's allowing more people to have access to technology to better at their navigation.
+21:17:31 Sir budget
+21:17:36 for our Seidel safety environmental analysis, where the main goals of this project is to improve the safety of people who are visually impaired, as they can potentially face issues that people who are excited may not as they navigate from location to
+21:17:49 location.
+21:17:51 Safety is naturally one of our primary concerns as a result of this, as far as environmental analysis. Our system is designed to be 100% Electric never rechargeable battery is to avoid waste from reasonable from non reusable batteries.
+21:18:07 You can see our references.
