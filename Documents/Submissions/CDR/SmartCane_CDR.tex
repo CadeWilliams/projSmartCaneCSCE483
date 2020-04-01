@@ -1,0 +1,412 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+\title{\textbf{\Huge Smart-Cane}\ \\ \textbf{\Huge CDR Report} \\ \includegraphics[scale=0.5]{smartCane logo.png}\\ }
+\author{Baltazar Guerra L.\\ Jonathan Williams \\ Matthew Giuffrida \\ Arthur Helmen \\ Shawn Popal \\ \\ \\ \\ \\}
+
+
+\date{3/31/2020}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Problem Background}
+
+Blindness and visual impairment present natural complications to travel for those who have those conditions. Obstacle detection in particular is an area of concern, as could be expected. One of the most common tools used by those individuals who have visual impairments to assist in travel is a specialized cane, usually referred to as a “white cane” in the United States. These are long canes, usually capable of folding up for ease of storage. They are generally white, as the name indicates, for both ease of visibility for others, and to identify the user as blind or visually impaired. The canes are used by the individuals to identify potential obstacles through sweeping the cane in front of themselves, as well as a form of surveying the environment around them – for example, feeling the bumps on a road that indicate a crossing is there. These canes generally are purely mechanical, with no electronic components. \par
+
+This led to our proposal to create a “smart cane” – a device that acts as a white cane, while also leveraging technology to add to or enhance the basic functionality of the traditional, mechanical cane. The primary goal is to create a device that keeps all of the functionality of a traditional cane, while adding additional capabilities to the core functionality of the cane – that is, to make safe, efficient travel easier for those with blindness or visual impairments. \par
+
+\subsection{Needs Statement}
+In order to have a better understanding of the problems we need to tackle we spoke to Justin Romack who works at Texas A\&M Disability Services (and is blind) so he could give us some insight of his everyday struggles and those of his peers. Through this conversation and separate research, a list of areas of need was identified. Those primary issues are: not being able to detect obstacles that are farther away from their cane or overhead, losing track of one’s spatial location inside of a room or building, indoor and outdoor navigation, and heavy equipment hurting one’s wrist and arm after some time.
+
+
+\subsection{Goal and objectives}
+
+The overall goal of the project is to make it easier and safer for people with visual impairments to travel through everyday environments. To that end, a list of goals was compiled below.\par
+\begin{itemize}
+    \item Current market solutions are very expensive and lack certain quality of life functionality. The product should be relatively low cost.
+    \item Users often become very accustomed to the canes that they use. The product should be able to attach to a variety of existing canes.
+    \item White canes cannot generally detect obstacles at or above chest level. The product should be able to do so.
+    \item The product should be able to connect to, and communicate with, a user’s smartphone.
+    \item The product should be able to quickly and easily allow the user to contact emergency services.
+    \item The product should be able to provide feedback through audio and haptic channels.
+    \item The product should be able to provide directions in an outdoor or indoor environment
+\end{itemize}
+
+
+
+\subsection{Design constraint and feasibility}
+
+There are four primary constraint areas. First, power. The device must be portable in order to perform its function, and therefore must have its own power source with enough charge to be useful to the user. 
+Second, the weight. White canes are designed to be constantly moved around, in order to “feel” the environment. If the product is too heavy, it will quickly tire the user to be moving it around constantly. Since preserving the original functionality of the cane is a key requirement, the device must be lightweight enough to not be a burden on the arms or wrists of a user.
+Third, the size. If the device is too bulky, it can get in the way of the user or make the cane difficult to store. Also, a bulky device would likely have a poor aesthetic, and therefore make the user less willing to use the device.
+Fourth, the function. The device must speak to the key needs identified previously – namely, obstacle detection, navigation, and orientation, among others. \par
+Using these constraints, a list of requirements was drawn up, and can be seen in the table below. \par
+
+\begin{figure}[h]
+\centering
+\caption{Product Requirements}
+\includegraphics[scale=0.75]{requirements_table.JPG}
+\end{figure}
+
+The product at its core is feasible. The hardware requirements are within budget, and components that are capable enough for our needs have been identified. The largest possible issue is in fitting the performance of the product into the maximum tolerances we have identified. In particular, the area that is both the most difficult and the largest possible differentiating factor for the product is the indoor navigation. While we have done enough research to believe that reaching our goal is feasible, it is the most likely of the functionalities present to present the most difficulties in performing consistently within our margin of error.\par
+
+Another area of potential difficulty is the image recognition system used to detect overhead obstacles. This system has a great deal of complexity in order to address the complex problem it is aimed at solving, and thus has many possible places for the tolerances to start becoming strained.\par
+
+\subsection{Validation and Testing Procedures}
+The testing and validation process will consist of individual component tests, an iOS usage test, iOS-Device communication test, battery life test, indoor usage test, and outdoor usage test. Our goal during the development process is to test as soon as we are able to do so, and to continuously test as we progress, in order to make sure that we have an accurate understanding of the current prototype's capabilities as we progress.
+
+\section{Proposed Design}
+
+\subsection {Updates to the proposal design}
+
+We hope to integrate a lot of the functionalities mentioned above into our final product. We will be using ultrasonic sensors for detecting objects, like many of the examples discussed above, but we will also integrate cameras for added obstacle detection (and to be able to recognize things like crosswalks). We also hope to keep the cost down, to ensure affordability, without compromising our device’s effectiveness. Unlike many of the solutions we found (except the SmartCane) we hope to create device that can fit onto the end of a collapsible cane, so the user can still experience the portability of a traditional cane.
+
+\subsection{System description}% Used to be Evaluation of Alternative Solutions
+Our initial idea for the overall project was to make an actual cane that would have all this features. However, we decided that it would be better to instead make an attachment that could be put into existing canes. This way we can tackle a larger crowd, reduce the cost on our end, and not change their routines too much by having a whole new cane.\par
+
+Initially we were thinking of using Wi-Fi to send the feedback from the cane to the smartphone or smart-watch. However, due to the fact that at times the Wi-Fi on campus will fail and also due to having to hop in between routers, we decided that a more consistent option would be to use Bluetooth. Justin had told us that most visually impaired people (that he knows) will always carry their smartphones and smart-watches on them, so this helps to ensure that there will always be a stable connection in between their devices and the cane. Similarly, it's better for whenever the user is moving inside of a building.\par
+
+While it is good that we're using the sensors to detect the incoming obstacles, it's not a good idea to have that as the only source of input. Hence, we decided to use 2 cameras to aid in detecting the obstacles. This will help in case the sensors malfunction, and will also be able to measure the depth so it can have a more accurate measurement.\par
+
+Our cane will be able to direct people inside of a building form point A to B. While this will be very useful, we're also implementing a "breadcrumb" system that the user will be able to use in order to leave a "trail". By doing so, the cane can retrace their path whenever they have to leave, and will be "picking up the breadcrumbs" along the way. It's an addition to the mapping inside of buildings so it's more efficient.\par
+
+Finally, after speaking with Justin, we came to the conclusion that different users will prefer different types of feedback. Some users rely too much on their hearing, so audio feedback can result disturbing to them. Similarly, some other users rely more on the sensation from their cane, so them using haptic feedback could result problematic. This is why we decided to go for a robust system rather than a fixed system. With this, users can change the settings and select which type of feedback they will receive.
+
+\clearpage\subsection{Design Specifications}
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.8\textwidth]{level0.jpg}
+ \captionof{figure}{Level 0 Diagram}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+The main module for this will be the cane-mountable device itself. All the sensors will send their inputs into the cane, from which the internal computer will process the incoming data and react appropriately based a multitude of factors. Human input will also be a factor, as such features like the waypoint drop system will require input on when the waypoints should be dropped along with determining when to retread the dropped waypoints. The can will be using a combination of vibration motors and speakers to deliver the haptic and sound-based feedback respectively. \par
+The other module is the optional smartphone connection available via Bluetooth. The smartphone is responsible for providing GPS data to the cane so that it can operate most of its features including the waypoint system. The smartphone is also where most of the user settings will be changed, depending on how the user would like to receive their feedback from the cane. Finally, the smartphone can mimic the haptic and sound feedback from the cane should the user desire so. \par
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{level1.jpg}
+ \captionof{figure}{Level 1 Diagram}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+This diagram takes a closer look at the internal components of our cane module. All of the sensors and the Raspberry Pi itself will receive power from an external power source, a rechargeable battery pack. Those sensors will then feed info constantly into the Raspberry Pi. From outside the system, the Pi is receiving various forms of user input along with the GPS data from the smartphone. The Pi then processes the data, determines the appropriate action to take, then broadcasts that action to the user through both the haptic feedback motors and the speakers. The data from the smartphone connection will control how this data is processed as that is where users can change and personalize the settings of their device to best suit their daily needs. \par
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{level2.JPG}
+ \captionof{figure}{Finite State Diagram}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+This diagram describes some of the possible actions the cane will be able to take. On startup, the cane will attempt to make a Bluetooth connection with a smartphone if there is one already paired along with anything else needed to startup. A small vibration will alert the user when startup is finished and then the cane will enter the "idle" state. \par
+
+In the idle state, many of the unneeded sensors like the gyroscope and GPS data will be turned off to save on power and extend battery life. The only real smart features active in this state are the ones necessary for object detection. Whenever an object is detected, the user will be warned by some form of feedback. Once the obstruction is cleared, the cane returns to the idle state. \par 
+
+Should the user want some sort of navigational assistance, then the cane will enter "nav mode" where the cane is able to take full advantage of its sensor suite. This mode is where some of the cane's unique features like the waypoint system are housed. The gyroscope will be responsible for determining the orientation of the user and guiding them along the path to their destination. At turns, the cane will provide feedback to indicate to the user which direction to head in. The cane will also automatically leave waypoints at certain intervals, along with allowing the user to set additional ones as needed. Once navigation is finished, the user can choose to follow their waypoints set earlier to go back where they came from, or to discard the waypoints and head down a new path. \par
+
+
+
+\section{Project Management}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\subsection{Updated Implementation Schedule}
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{gantt.png}
+ \captionof{figure}{Gantt Chart}                
+ \label{fig:fig1}
+\end{minipage}
+}
+
+Progress on component testing has been good. All the components have been tested and appear to be within requirement tolerances, with the exception of the GPS module that has not been able to be tested yet. The app has made excellent progress, with the outdoor navigation section essentially completed. The progression of the hardware has been less smooth, due to the impact of recent events on our capability to meet in person. We have been working on plans to better deal with the new restrictions, and progress should pick up in that area soon.
+
+\subsection{Updated Validation and Testing procedures}
+This project will bring multiple functional systems together to create our final device. Each of these systems can be tested individually to ensure they are working, and we have chosen tests and procedures that will be able to validate their functionalities. These system level tests will be conducted on: the obstacle detection, the outdoor navigation, the indoor navigation, and the emergency contact feature. \par
+
+Our obstacle detection system will lie within the device housing that will be attached to the cane. In order for it to work correctly, the RaspberryPi, ultrasonic sensors, and vibration motors/speaker must all work together. This function will be tested in two part, first by placing obstacles within the radius we had specified in our requirements (10ft in front).We will select different size objects (depending on what we have in our houses) and place the sensors at half foot increments from 0.5-10 ft to ensure the detection works. For overhead, a towel can be taped above a door way to simulate an overhead obstacle. If the sensors accurately detect the obstacles in  front and above the system, and consistently relay this information through the users choice of output (audio or haptic). Then we can say this part of the project is working.\par
+
+For our outdoor navigation, we have to make sure that the developed application is able to communicate with the device the user will attach to their cane (specifically the vibration motors). We can test this feature by inputting multiple on-campus locations, using voice to text, and making sure the app is retrieving the appropriate navigation directions and sending them to the pi. If the instructions are being accurately sent, we can validate this function by
+choosing on-campus locations, then following the feedback given to the user from the device. If we are able to accurately go to our intended destination, then we can conclude that the system is working correctly.\par
+
+Our indoor navigation system will rely on the pi's gyroscopic sensor to track a user's location relative to a series of user chosen anchor points set through the app, as well allowing the user to navigate back to those points through cues communicated from the vibration motors. First we will test to make sure the user is able to set one anchor point, and then able to be led back to it. Then we will mark a series of points on the floor, with tape, while we also set these anchors with the app. If we can be guided back to the markings on the floor in the correct order, then we can confirm that the system has the ability to consistently mark, and recognize, these points-as well as accurately guide the user to each point. \par
+
+The emergency contact feature involves a button on the device, and the app, to allow for a phone call to be made. To test our device's ability to contact an emergency contact, we will set a non-emergency number as the contact (using voice to speech), and activate the button on the device (which will require 2 long presses). If we can consistently use the button to make the phone call, we can be confident the feature will work in an emergency situation.\par
+
+Our demonstration of our project will closely resemble the methods we used to test its system-level functionalities. To demonstrate the ability of our obstacle detection, we will set up an indoor space with cardboard box, or chair, obstacles  and record a team member navigating these obstacles blind-folded. The audio feedback option will be turned on so the cues can be heard on camera. To demonstrate our outdoor navigation, a video of a team member setting a location using the app, and then navigating to the chosen location using the device (again with audio feedback on) will show the functions capability. To demonstrate our projects indoor navigation ability, a room will be set up with pre-marked x's on the floor, a team member will be filmed going to each x and setting an anchor point. Then they will be blindfolded, and will use the device to navigate back to each x until they reach their starting point. The emergency contact feature will be demonstrated using a video of an emergency contact being set, then the button on the device will be activated, and the phone will be shown making an outgoing call. We believe these demonstrations will be sufficient proof of the features that will make up our project. \par
+
+\subsection{Updated Division of Labor and Responsibilities}
+Even though every team member shares similar skills that will help the team succeed, there are specific areas that best fit the interests and strengths of each individual member. With a project as extensive as this and with a time constraint of just around 2 months, it is key for the team to stay in touch and keep everyone updated on their progress. \newline\par
+
+\textbf{Baltazar Guerra:}
+\begin{itemize}
+    \item Finalize testing of Ultrasonic Sensors in multiple conditions (4/4)
+    \item Incorporate the vibrating motors to the testing: make them vibrate when an object gets too close. (4/9)
+    \item Pass on the components so they can be used on the Raspberry Pi (4/11).
+    \item Perform usage tests to finalize the prototype (4/20).
+\end{itemize}
+
+\textbf{Shawn Popal:}
+\begin{itemize}
+    \item Finalize outdoor navigation interface (4/5)
+    \item Build indoor navigation interface (4/10)
+    \item Polish app GUI and interface (4/15)
+    \item Implement feedback from tests into app (4/20)
+\end{itemize}
+
+\textbf{Matthew Giuffrida:} 
+\begin{itemize}
+    \item Construct device housing (4/10)
+    \item Attach haptic sensors to housing and test (4/16)
+    \item Perform usage tests (4/20)
+\end{itemize}
+
+\textbf{Arthur Helmen:}
+\begin{itemize}
+    \item Construct device housing (4/10)
+    \item Attach ultrasonic sensors to housing and test (4/16)
+    \item Perform usage tests (4/20)
+\end{itemize}
+
+\textbf{Jonathan Williams:}
+\begin{itemize}
+    \item Add speakers to device to implement audio feedback (4/8)
+    \item Implement Bluetooth connection to iOS app (4/15)
+    \item Perform usage tests (4/20)
+\end{itemize}
+
+\textbf{Baltazar Guerra} was assigned to lead the team and collaborate on the overall system and software design. His previous experience in managing the deadlines and roles for group projects like those of CSCE 315 and non-Engineering courses will help him manage the team. Additionally, his experience from summer projects will help in the software design of the system. \par
+
+\textbf{Shawn Popal} will take charge of the app development and finance, along with collaborating in the overall software design. His interest in working in iOS mobile apps will be very beneficial for the team in making the cane communicate with the smartphone and smartwatch.
+
+\textbf{Matthew Giuffrida} will work primarily in hardware, prototyping, and testing, with additional work in software as needed. His previous experience working with a Raspberry Pi will help him in this role, as well as his previous experience utilizing OpenCV and cameras on a RasPi. \par
+
+\textbf{Arthur Helmen} will primarily work on the hardware portion on the project, testing sensors, working with the Raspeberry Pi,  assembling the physical components of the device, and ensuring the device meets the set physical requirements. His previous hardware experience in classes like CSCE 462 (microcomputer systems) will help him in his role. He will also be available to work on any other portions of the project that may need assistance. \par
+
+\textbf{Jonathan Williams} will focus on Software design and prototype testing. His previous experience on ensuring communication between the hardware and software for his project in a Microcomputers course will help the team in settling the connection between the Pi and the output devices and smart devices. Additionally, his experience in debugging software at Perfection Wholesale will help the team in finding any errors early on.
+
+%\subsection{Itemized Budget}
+
+%\makebox[0pt][l]{%
+%\begin{minipage}{\textwidth}
+%\centering
+%    \includegraphics[width=.9\textwidth]{budget.png}
+% \captionof{figure}{Itemized Budget}
+% \label{fig:fig1}
+%\end{minipage}
+%}
+
+\section{Preliminary Results}
+\subsection{Camera Lenses}
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{lenses.JPG}
+ \captionof{figure}{From left to right: Long Lens, V1.3, V2.1}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+These are the lenses we tested for use in our object detection system. We setup a simple testing environment to determine the quality of each lenses and the quality of the picture they can each provide. The goal was to take a picture of the back of a shampoo bottle from approximately 6-8 inches away. We would then look at how legible the small text on the bottle was to determine the quality of image provided by the camera.\par
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{testingEnv.JPG}
+ \captionof{figure}{The testing environment}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+Using this setup, we took a picture with each lens and have collected them below.\par
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{lensPic.JPG}
+ \captionof{figure}{Picture using Long Lens}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{13Pic.JPG}
+ \captionof{figure}{Picture using V1.3}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{21Pic.JPG}
+ \captionof{figure}{Picture using V2.1}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+As you can see, the Long Lens has not only the highest image quality, the lens has a much wider field of view compared to the other two. V1.3 and V2.1 are the same style, so they have the same quality and resolution. They both appear to struggle when focusing on items within a distance of 8 inches, but for the scope of our project they will be looking at images much further away so that is acceptable. V2.1 seems to have an even rougher time focusing on closer objects but in both images, you can see that objects further away are still clear and easy to see.\par
+
+\subsection{Battery}
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{batteryTest.JPG}
+ \captionof{figure}{Battery testing environment}
+ \label{fig:fig1}
+\end{minipage}
+}
+
+\medskip
+
+For testing the battery, we simply hooked up the Raspberry Pi to the battery and ran it dry on idle. We initially expected the Pi to last around 5 hours but to our surprise it ran for almost 13 hours. While this doesn't simulate the Pi operating under load, which would undoubtedly drain the battery even faster, it is easy to extrapolate an average run time of about 9 hours per charge. This is more than enough to last the whole day without needing to constantly recharge.\par
+
+
+\subsection{Ultrasonic Sensors}
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{Arduino with UltraSonic.PNG}
+ \captionof{figure}{Schematic of the Sensor connected to the Arduino UNO for testing. \cite{REXQualis}}
+ \label{fig:fig1}
+\end{minipage}
+}
+\newline \ \\
+In the midst of splitting the work, we ended up splitting up the components to test amongst us. Since the readings will be the same on the UNO and the Pi (and since the tester did not have a Pi), we used an Arduino UNO to test how well the sensor detected objects at certain distances. It's very important for our project to have these sensors since those are the ones that will notify the user if he is approaching and obstacle before he bumps into it. These sensors will be used heavily both in outdoor and indoor navigation.
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[width=.9\textwidth]{Sensor test.jpg}
+ \captionof{figure}{Holding a sensor at a distance from the monitor, where it shows the readings.}
+ \label{fig:fig1}
+\end{minipage}
+}
+\newline 
+
+To test the sensors, we would hold it in front of an object and check if the distance was accurate enough. After many tests, we saw that the distance was near exact if it was under 5 ft. Anything above that could sometimes give a variation of up to 10\%, but since it's over 5 ft it doesn't affect the scope of the project. We then did more tests in which we constantly changed the distance in between the object and the sensor to see how well the sensor gave the updated information. The sensors consistently updated the new distance without much struggle and remained pretty accurate when the distance was under 5 ft. We will continue doing more testing were now we will mimic the motion of a cane to see if it can still detect the distance accurately and update our code accordingly. Due to the COVID-19 pandemic, it has become really difficult to work on the hardware aspect of this project. Since we can't really be working on something at the same place, it slows things down. However, as we finish testing the individual components, we will start merging them together and slowly build the prototype. The thing to follow after testing these sensors will be to incorporate the vibrating motor so they vibrate when an obstacle is close.
+
+
+
+\newpage
+
+\subsection{IOS Application}
+
+    We have made good progress on developing not only the User Interface for the application but the Outdoor Navigation as well. \\
+    
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[scale=.35]{mainAppPage.png}
+ \captionof{figure}{Main Application Page}
+ \label{fig:fig1}
+\end{minipage}
+} \\
+
+    Here we can see the Main Application page where users can either configure their settings or more commonly, navigate to a certain location. The layout of the two buttons is designed in a way that makes it easy for users with visual impairments to remember and select what options they would like. Additionally, when clicked on, the buttons will announce what has been clicked. Such as when users press the Navigation button, "Navigation", will be heard.
+    
+
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[scale=.35]{navTypePage.png}
+ \captionof{figure}{Navigation Type Selection Page}
+ \label{fig:fig1}
+\end{minipage}
+} \\
+
+    Here users have the choice of selecting between Outdoor and Indoor navigation. Currently our focus is on Outdoor navigation as we feel like that would be the more general use case and we are still determining the exact integrations we will be making with the Cane and the App to perform the Indoor Navigation. This page contains the same button layout structure as the Main Page for the same reasons mentioned.\\
+    
+    
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[scale=.35]{navSelectionPage.png}
+ \captionof{figure}{Building Selection Page}
+ \label{fig:fig1}
+\end{minipage}
+} \\
+    
+    When Outdoor navigation is selected, the user will be presented with this screen to allow them to select which building they would like to travel to. We have implemented swiping gestures to ease the process of going through the list of implemented buildings as well as selecting one. In order to scroll through the list, users only need to place their thumb on the right side of the screen and swipe left. This will trigger the hidden button on the right side of the screen which will show and vocalize the next building. Once a desired building has been reached, the user will now place their thumb on the left side of the screen and swipe right which will save and transfer the building location to the next page to generate the route to the selected building. This intuitive gesture makes it easy for users to scroll through and select the desired building, particularly those who have visual impairments. 
+    
+    
+\makebox[0pt][l]{%
+\begin{minipage}{\textwidth}
+\centering
+    \includegraphics[scale=.35]{routePage.png}
+ \captionof{figure}{Route Generation Page}
+ \label{fig:fig1}
+\end{minipage}
+} \\
+
+    Once the building has been selected, the user will then be presented with the route between them and the building they wish to travel to. Currently we are utilizing the MapKit API provided by Apple to generate the route. We would normally base it off the user's location but we have hard coded the starting location to be the Emerging Technologies Building (ETB) so we can simulate what the experience would be like when the user is on campus, however the code to attain the user's current location has already been developed. While we are currently using the MapKit API, we are going to switch to utilizing Google Maps as opposed to Apple's API because objects provided by Apple's API make it overly complicated to perform a simple navigation which is what we are looking for. So while user's will need to have Google Maps installed on their device, we believe this will not be too much of a burden on our users in exchange for a more fluid user experience.
+    
+
+
+
+
+
+\section{References}
+\begin{thebibliography}{9}
+\bibitem{SmartCane} SmartCane, "What is SmartCane", http://smartcane.saksham.org/overview/, (2016)
+\bibitem{UltraCane} UltraCane, “About the UltraCane,” http://www.ultracane.com/about\_the\_ultracane, (19 July 2014)
+\bibitem{SmartStick} H. R. Shaj, D.B. Uchil, S. S. Rane, P. Shete. "Smart Stick for Blind Using Arduino, Ultrasonic Sensor and Android". Department of Computer Engineering K.J. Somaiya College of Engineering, Mumbai India. International Journal of Engineering Science and Computing, April 2017. 
+\bibitem{Sound} R. K. Megalingam, A. Nambissan, A. Thambi, A. Gopinath, and M. Nandakumar, Sound and touch based smart cane: Better walking experience for visually challenged, 2015.
+\bibitem{Indoor} V. Kulyukin, C. Gharpure, J Nicholson, and S. Pavithran. Rfid in robot assisted indoor navigation for the visually impaired. 2004 IEEE/RSJ International Conference on Intelligent Robots and Systems, 2004.
+\bibitem{Haptic} M. Aggravi, D. Prattichizzo, G. Salvietti, “Haptic Assistive Bracelets for Blind Skier
+Guidance” , AH ‘16: Proceedings of the 7th Augmented Human International Conference 2016.
+\bibitem{IOS Application} Apple Developer Documentation, developer.apple.com/documentation/.
+\bibitem{REXQualis}
+“REXQualis - North America.” Rexqualis Industries,Ingenious \& fun DIY electronics and kits. Accessed March 27, 2020. http://www.rexqualis.com/download/.
+
+\end{thebibliography}
+
+
+
+%\section{Appendices}
+%The "Work Breakdown" can be found in the Github under "Submissions/Proposal/'Work Diagram.pdf'".\par
+%The data sheet included is that of the GPS Module. It can be found in the same Github folder under the name of "GPS Module Datasheet.pdf". We're using this since it will be very helpful in using the "EASY" embedded system to help when indoors. This system calculates and predicts the location whenever there's not enough information from the satellites.
+
+\end{document}
+
