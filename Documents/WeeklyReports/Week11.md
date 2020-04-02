@@ -33,24 +33,20 @@
 
 
 ## Plans for next period
-1. \
-
-2. \
-
-3. \
-
-4. \
-
-5. \
+1. Start using YOLO V3 (image detection software) for obstacle detection with the cameras.
+2. Build the housing for all the components and start getting them all together.
+3. Finalize and start testing the App for outdoor navigation.
+4. Start using indoor-specific components for indoor navigation and begin testing on that.
+5. Incorporate all the components used for outdoor navigation.
 
 ## Task assignment per team member (to be completed before the next meeting)
 | Task Description | Assigned to |
 | --- | --- |
-|_________________________________________________________________________________ | Baltazar Guerra L |
-| | Matthew Giuffrida |
-| | Shawn Popal |
-| | Jonathan Williams |
-| | Arthur Helmen |
+|Finalize testing the components assigned. Incorporate the components in unison. Pass on the components to Arthur so he can add them to the housing. | Baltazar Guerra L |
+|Construct device housing. | Matthew Giuffrida |
+|Finalize outdoor navigation interface. | Shawn Popal |
+|Start using YOLO V3 with the cameras. | Jonathan Williams |
+|Order another Pi to test the components for indoor navigation. | Arthur Helmen |
 
 ## Project management status
 1. As of now, 4 of us are in College Station and Shawn Popal is in Dallas. Since he is mostly working on the software side of the project, that aspect doesn't hold us back. 
