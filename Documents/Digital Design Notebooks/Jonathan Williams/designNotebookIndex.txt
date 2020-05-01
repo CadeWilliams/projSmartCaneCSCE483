@@ -1,0 +1,33 @@
+Note: All ranges are inclusive
+Notepad Check 1
+	PDF Pages 1 - 4
+	Dates: 
+		1/21/20
+		1/27/20
+		1/28/20
+		2/4/20
+		
+Notepad Check 2
+	PDF Pages 5 - 7
+	Dates: 
+		2/11
+		2/13
+		2/25
+
+Notepad Check 3
+	PDF Pages 8 - 12
+	Dates: 
+		2/27
+		3/3
+		3/20
+		3/21
+		3/22
+
+Notepad Check 4
+	PDF Pages 14 - 17
+	Dates: 
+		4/8
+		4/14
+		4/20
+		4/28
+
