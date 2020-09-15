@@ -1,21 +1,6 @@
-# Contents repo (teaching staff manages the default repo)
-Contains course related materials, slides, templates, rubrics
+# Smart Cane
+Due to Covid-19, our project was sadly unable to be fully realized with a physical prototype. Instead, our members had to work together and adapt to a rapidly changing environment to create functional software prototypes that could be easily "combined", to simulate the various features of our Smart Cane. 
 
-IDEO Shopping Cart Video: https://www.youtube.com/watch?v=izjhx17NuSE
-IDEO and Story of Design: https://www.youtube.com/watch?v=_KK958OkD6g
+Our cane's features include a mobile iOS based app for the users to sync with the cane over Bluetooth, a set of IR sensors to detect physical objects and their distances to the cane, and an object recognition system using TensorFlow Lite and a lightweight model courtesy of Google in order to achieve somewhat realtime object recognition on a Raspberry Pi 3. We managed to achieve around 2 FPS using the realtime object recognition.
 
-
-# Team repo (each team manages its own repo)
-Update this README and the Submissions, Designs, and Media directories accordingly in your Team Repository. See the organization of directory paths for following deliverables under the **Team Repository**
-
-**Designs**:  /CODE/codefiles, readme file for running code, dataset , data sheets , freeware software tools, etc.
-
-**Documents/Submissions/Proposal/**: tex, pdf, and class presentation slides pdf
-
-**Documents/Submissions/CDR/**: tex, pdf, and class presentation slides pdf
-
-**Documents/Submissions/Final/**: tex, pdf, and class presentation slides pdf
-
-**Documents/WeeklyReports/**: Week3.md, Week4.md,......, Week13.md (Refer to the Weekly Schedule for Week number)
-
-**Media/**: close-up pictures of your system (png, jpg, etc) , high quality movie demo of the system working (mp4)
+More detailed descriptions of implementation can be found under Documents/Submissions/Final/SmartCane_Final_Report.pdf
